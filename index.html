@@ -1,74 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOI Convocation</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #162B45;
-            line-height: 1.6;
-        }
-        .header {
-            background: #162B45;
-            color: #D4AF37;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .accordion {
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            margin: 20px;
-            padding: 15px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .accordion:hover {
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        .content {
-            padding: 10px 0;
-            border-top: 1px solid #D4AF37;
-            margin-top: 10px;
-            display: none;
-        }
-        .course-info {
-            background-color: #7BDCB5;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation FOI - Val Formation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: Calibri, sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #162B45;
+}
+
+header {
+  background: linear-gradient(135deg, #162B45, #1f3d63);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+header img {
+  max-width: 140px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: Montserrat;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.section {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+  border-left: 5px solid #FF6F61;
+  padding-left: 10px;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  outline: none;
+  width: 100%;
+  text-align: left;
+  background: #162B45;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.panel {
+  display: none;
+  padding: 15px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #D4AF37;
+  color: white;
+  text-decoration: none;
+  margin: 10px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.highlight {
+  background: #7BDCB5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+footer {
+  background: #162B45;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+</style>
 </head>
+
 <body>
-    <header class="header">
-        <h1>FOI Convocation 2026</h1>
-        <p>Your gateway to academic success</p>
-    </header>
-    <div class="accordion" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">
-        <h2>Course Information</h2>
-    </div>
-    <div class="content">
-        <div class="course-info">
-            <h3>Course 1: Introduction to FOI</h3>
-            <p>Details about Course 1.</p>
-        </div>
-        <div class="course-info">
-            <h3>Course 2: Advanced FOI Studies</h3>
-            <p>Details about Course 2.</p>
-        </div>
-    </div>
-    <script>
-        document.querySelectorAll('.accordion').forEach(item => {
-            item.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
-    </script>
+
+<header>
+  <img src="logo.png" alt="Val Formation">
+  <h1>Devenir formateur interne</h1>
+  <p class="tagline">Transformez votre expertise en impact pédagogique</p>
+</header>
+
+<div class="section">
+
+<h2>📅 Informations pratiques</h2>
+<p><strong>Date :</strong> 1er avril 2026</p>
+<p><strong>Lieu :</strong> Groupama Loire Bretagne</p>
+<p><strong>Adresse :</strong> 23 Boulevard Solférino, Rennes</p>
+
+<div class="highlight">
+💡 Formation courte, concrète et directement applicable terrain
+</div>
+
+<h2>🎯 Objectifs</h2>
+<ul>
+<li>Passer d’expert métier à formateur impactant</li>
+<li>Structurer une formation efficace</li>
+<li>Engager un groupe et maintenir l’attention</li>
+<li>Adapter sa pédagogie en temps réel</li>
+<li>Faciliter le transfert terrain</li>
+</ul>
+
+<h2>📚 Programme</h2>
+
+<button class="accordion">Module 1 – Posture du formateur</button>
+<div class="panel">
+<p>Comprendre les différences entre expert et formateur</p>
+</div>
+
+<button class="accordion">Module 2 – Structurer une séquence</button>
+<div class="panel">
+<p>Construire une demi-journée efficace (20/60/20)</p>
+</div>
+
+<button class="accordion">Module 3 – Techniques d’animation</button>
+<div class="panel">
+<p>Les 5 leviers d’engagement + méthodes interactives</p>
+</div>
+
+<button class="accordion">Module 4 – Lecture de situation</button>
+<div class="panel">
+<p>Observer, analyser et ajuster en temps réel</p>
+</div>
+
+<button class="accordion">Module 5 – Transfert terrain</button>
+<div class="panel">
+<p>Méthode des 3T + plan d’action concret</p>
+</div>
+
+<h2>📥 Documents</h2>
+<a class="btn" href="programme.pdf" download>Programme</a>
+<a class="btn" href="livret-stagiaire.pdf" download>Livret stagiaire</a>
+
+<h2>📍 Localisation</h2>
+<iframe 
+src="https://www.google.com/maps?q=23 boulevard solferino rennes&output=embed" 
+width="100%" height="300" style="border:0;">
+</iframe>
+
+</div>
+
+<footer>
+<p>Formatrice : Valérie Legentil</p>
+<p>Email : à compléter</p>
+<p><a href="#" style="color:#D4AF37;">Politique handicap</a></p>
+</footer>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    panel.style.display = panel.style.display === "block" ? "none" : "block";
+  });
+}
+</script>
+
 </body>
 </html>
