@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Course</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Welcome to the Training Course</h1>
+        <nav>
+            <ul>
+                <li><a href="#module1">Module 1</a></li>
+                <li><a href="#module2">Module 2</a></li>
+                <li><a href="#module3">Module 3</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-            <h2>Course Overview</h2>
-            <p>This training course will cover various topics related to professional development.</p>
+        <section id="module1">
+            <h2>Module 1: Introduction</h2>
+            <p>This module covers the basics of the training course.</p>
+            <button onclick="alert('Welcome to Module 1!')">Start Module</button>
         </section>
-        <section>
-            <h2>Course Schedule</h2>
-            <ul>
-                <li>Week 1: Introduction</li>
-                <li>Week 2: Advanced Topics</li>
-                <li>Week 3: Project Work</li>
-            </ul>
+        <section id="module2">
+            <h2>Module 2: Advanced Topics</h2>
+            <p>This module goes deeper into the subject matter.</p>
+            <button onclick="alert('Welcome to Module 2!')">Start Module</button>
+        </section>
+        <section id="module3">
+            <h2>Module 3: Conclusion</h2>
+            <p>This module wraps up the training course.</p>
+            <button onclick="alert('Welcome to Module 3!')">Start Module</button>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Training Course</p>
+        <p>&copy; 2026 Training Course Inc.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
