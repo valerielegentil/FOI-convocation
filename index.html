@@ -3,40 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Course</title>
+    <title>FOI Convocation</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #162B45;
+            line-height: 1.6;
+        }
+        .header {
+            background: #162B45;
+            color: #D4AF37;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .accordion {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            margin: 20px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .accordion:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .content {
+            padding: 10px 0;
+            border-top: 1px solid #D4AF37;
+            margin-top: 10px;
+            display: none;
+        }
+        .course-info {
+            background-color: #7BDCB5;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Training Course</h1>
-        <nav>
-            <ul>
-                <li><a href="#module1">Module 1</a></li>
-                <li><a href="#module2">Module 2</a></li>
-                <li><a href="#module3">Module 3</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <h1>FOI Convocation 2026</h1>
+        <p>Your gateway to academic success</p>
     </header>
-    <main>
-        <section id="module1">
-            <h2>Module 1: Introduction</h2>
-            <p>This module covers the basics of the training course.</p>
-            <button onclick="alert('Welcome to Module 1!')">Start Module</button>
-        </section>
-        <section id="module2">
-            <h2>Module 2: Advanced Topics</h2>
-            <p>This module goes deeper into the subject matter.</p>
-            <button onclick="alert('Welcome to Module 2!')">Start Module</button>
-        </section>
-        <section id="module3">
-            <h2>Module 3: Conclusion</h2>
-            <p>This module wraps up the training course.</p>
-            <button onclick="alert('Welcome to Module 3!')">Start Module</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Training Course Inc.</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="accordion" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';">
+        <h2>Course Information</h2>
+    </div>
+    <div class="content">
+        <div class="course-info">
+            <h3>Course 1: Introduction to FOI</h3>
+            <p>Details about Course 1.</p>
+        </div>
+        <div class="course-info">
+            <h3>Course 2: Advanced FOI Studies</h3>
+            <p>Details about Course 2.</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.accordion').forEach(item => {
+            item.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
